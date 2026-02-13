@@ -7,9 +7,6 @@ format:
     toc-title: Contents
     embed-resources: true
 editor: visual
-project: 
-  type: website
-  output-dir: docs
 ---
 
 ## Executive Summary
