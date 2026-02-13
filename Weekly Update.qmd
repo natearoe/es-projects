@@ -1,0 +1,99 @@
+---
+title: "NRCS Ecological Site Development Progress Report"
+format:
+  html: 
+    toc: true
+    toc-depth: 3
+    toc-title: Contents
+    embed-resources: true
+editor: visual
+project: 
+  type: website
+  output-dir: docs
+---
+
+## Executive Summary
+
+## Soil - Ecological Site Correlation
+
+Beginning in 2010, the National Soil Information System (NASIS) database added the ability to correlate soils to ecological sites. This linkage accomplishes three primary objectives:
+
+-   soils are grouped into ecologically meaningful classes
+
+-   ecological sites inherit properties from existing soil data
+
+-   maps of ecological sites can be created using existing soil maps
+
+### Nationwide Correlation Process
+
+Since 2010, a significant effort has been made to correlate soils to ecological sites. Today, this process has neared completion, with over 95% of eligible soils being correlated.
+
+![Figure 1. Video of the nationwide effort to correlate soils to ecological sites since 2010. The full methodology is described in [SSURGO Components Correlated to Ecological Site Methodology].](ecological_site_correlation_mean_agg_compiled_movie.mp4)
+
+<!-- ![Figure 1. Video of the nationwide effort to correlate soils to ecological sites since 2010. The full methodology is described in [SSURGO Components Correlated to Ecological Site Methodology].](ecological_site_correlation_mean_agg_compiled_movie.mp4) -->
+
+### Nationwide Correlation Completion by Soil Components
+
+From a database perspective, correlations between ecological sites and soils are made between [soil components](https://www.nrcs.usda.gov/sites/default/files/2022-09/SSM-ch4.pdf) and ecological sites. Therefore, completion of the correlation process can be assessed by the percent of [eligible soil components] correlated. The publicly available nationwide soils dataset is referred to as the Soil Survey Geographic Database (SSURGO).
+
+![Figure 2. The percent of eligible SSURGO components correlated to an ecological site by date. The full methodology is described in [SSURGO Components Correlated to Ecological Site Methodology].](correlation_percent_by_date.jpeg)
+
+<!-- ![Figure 2. The percent of eligible SSURGO components correlated to an ecological site by date. The full methodology is described in [SSURGO Components Correlated to Ecological Site Methodology].](images/correlation_percent_by_date.jpeg){fig-align="center"} -->
+
+### Nationwide Correlation Completion by Acres
+
+Another important metric of completion, in addition to the percent of soil components correlated, is the area correlated. Soil components are associated with different acreage, therefore the percent components correlated and percent acres correlated can differ. In this, both measures have a completion around 95%.
+
+![Figure 3. The percent of eligible SSURGO acres correlated to an ecological site by date. The full methodology is described in [SSURGO Acres Correlated to Ecological Site Methodology].](acres_percent_by_date2.jpeg)
+
+<!-- ![Figure 3. The percent of eligible SSURGO acres correlated to an ecological site by date. The full methodology is described in [SSURGO Acres Correlated to Ecological Site Methodology].](images/acres_percent_by_date2.jpeg) -->
+
+## Methodology
+
+### General Methodology
+
+All [eligible soil components] were queried from [Soil Data Access](https://sdmdataaccess.nrcs.usda.gov/) (SDA), along with relevant fields from the Legend, Mapunit, and Component tables. Querying from SDA ensured that only components actively published in SSURGO were returned. Additional information was queried from NASIS, namely the 'Record When Last Updated' field from the 'Component Ecological Site' table. This field was used to track the correlation process over time. The earliest correlations were made in early 2010, therefore this was used as the beginning of the time sequence. Correlations were assessed quarterly (four quarters per year), an arbitrary time step that provided aesthetic results for the animation and graphs.
+
+#### Eligible Soil Components
+
+Eligible soil components are defined by the following criteria:
+
+-   published in [SSURGO](https://www.nrcs.usda.gov/resources/data-and-reports/soil-survey-geographic-database-ssurgo)
+
+-   [a major component](https://www.nrcs.usda.gov/sites/default/files/2022-09/SSM-ch4.pdf)
+
+-   not a [Miscellaneous Area](https://www.nrcs.usda.gov/sites/default/files/2022-09/SSM-ch4.pdf)
+
+-   not from an Out-of-Date Soil Survey Area
+
+#### Problems with 'Record When Last Updated'
+
+The 'Record When Last Updated' field is the only way to determine when a correlation between soil components and an ecological site was made, but it presents a couple of problems in this context.
+
+First, 'Record When Last Updated' is updated when a change is made to the record. Therefore, if the correlation is changed, 'Record When Last Updated' will show the date when the correlation was updated rather than when it was first correlated. For the purposes of this methodology, the initial correlation would be more useful. There is no way to determine what components have had their correlation updated, but anecdotally, it is a small number. It is possible for automated processes to update large numbers of records, but having asked multiple NASIS experts, nobody has knowledge of automated processes that update this table.
+
+A much smaller issue is that the Component Ecological Site table was first created without a 'Record When Last Updated' column. When 'Record When Last Updated' was added to the table, correlation records already existed. These records do not have a value in 'Record When Last Updated'. For this analysis, those correlations were assigned a correlation date of January 1st, 2010 - around the time that the 'Record When Last Updated' column was added. Therefore, some correlations precede the earliest date show on the figures.
+
+### SSURGO Components Correlated to Ecological Site Methodology
+
+The animation of the correlation process in Figure 1 used the data acquired from the General Methodology, in conjunction with the [gSSURGO mukey grid](https://nrcs.app.box.com/v/soils/folder/243464012908). Mapunit correlation percents were determined by assessing what percent of eligible soil components in the mapunit were correlated to an ecological site. The gSSURGO mukey grid was then replaced with the correlation percent by mukey. The results were aggregated from 30-meters to 300-meters using mean aggregation. This was performed across all steps in the time sequence. The resulting layers were then animated into a video.
+
+### Soil Component Correlation to Ecological Site Methodology
+
+The General Methodology provided the necessary data to produce Figure 2. The 'Percent of Eligible SSURGO Components Correlated' was calculated as:
+
+$$
+\frac{\text{\# of eligible SSURGO components correlated}}{\text{total \# of eligible SSURGO components}}
+$$
+
+This was performed across the full time sequence. The dots on Figure 2 are calculated values. The lines between dots are interpolated.
+
+### SSURGO Acres Correlated to Ecological Site Methodology
+
+The General Methodology provided the necessary data to produce Figure 3. The 'Percent of Eligible SSURGO Acres Correlated' was calculated as:
+
+$$
+\frac{\text{\# of eligible SSURGO acres correlated}}{\text{total \# of eligible SSURGO acres}}
+$$
+
+This was performed across the full time sequence. The dots on Figure 3 are calculated values. The lines between dots are interpolated.
