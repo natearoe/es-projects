@@ -17,11 +17,13 @@ This document details the nationwide effort to correlate ecological sites to soi
 
 The correlation of soils to ecological sites in the National Soil Information System (NASIS) has been tracked since 2010. This linkage accomplishes three primary objectives:
 
--   soils are grouped into ecologically meaningful classes
+-   Ecological sites are integrated into SSURGO and associated products (e.g., Web Soil Survey, Soil Data Access, Conservation Desktop, gSSURGO).
 
--   ecological sites descriptions (ESDs) inherit properties from existing soil data
+-   Soils are grouped into ecologically meaningful classes.
 
--   maps of ecological sites can be created using existing soil maps
+-   Ecological sites descriptions (ESDs) inherit properties from existing soil data.
+
+-   Maps of ecological sites can be created using existing soil maps.
 
 ### Nationwide Correlation Process
 
