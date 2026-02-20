@@ -11,11 +11,11 @@ editor: visual
 
 ## Summary
 
-This document details the nationwide effort to correlate ecological sites to soil mapunit components, including the importance of ecological site correlations and correlation progress since 2010. Correlation completeness now exceeds 95%.
+This document details the nationwide effort to correlate ecological sites to soil mapunit components, including the importance of ecological site correlations and the progress that has been made correlating ecological sites since 2010. Correlation completeness now exceeds 95%.
 
 ## Soil - Ecological Site Correlation
 
-The correlation of soils to ecological sites in the National Soil Information System (NASIS) has been tracked since 2010. This linkage accomplishes three primary objectives:
+The correlation of soils to ecological sites in the National Soil Information System (NASIS) has been tracked since 2010. This linkage accomplishes four primary objectives:
 
 -   Ecological sites are integrated into SSURGO and associated products (e.g., Web Soil Survey, Soil Data Access, gSSURGO, and Conservation Desktop via GRAS).
 
