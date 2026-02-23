@@ -3,7 +3,7 @@ title: "NRCS Ecological Site Correlation Progress Report"
 format:
   html: 
     toc: true
-    toc-depth: 3
+    toc-depth: 4
     toc-title: Contents
     embed-resources: true
 editor: visual
@@ -29,7 +29,7 @@ The correlation of soils to ecological sites in the National Soil Information Sy
 
 Since 2010, a significant effort has been made to correlate soils to ecological sites. Today, this process has neared completion, with over 95% of eligible soils being correlated.
 
-![Figure 1. Video of the nationwide effort to correlate soils to ecological sites since 2010. The full methodology is described in [SSURGO Components Correlated to Ecological Site Methodology].](ecological_site_correlation_mean_agg_compiled_movie.mp4)
+![Figure 1. Video of the nationwide effort to correlate soils to ecological sites since 2010. The legend depicts the percent of eligible soil components within mapunit correlated to an ecological site. The full methodology is described in [SSURGO Components Correlated to Ecological Site Methodology].](ecological_site_correlation_mean_agg_compiled_movie.mp4)
 
 ### Nationwide Correlation Completion by Soil Components
 
