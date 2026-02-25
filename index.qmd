@@ -57,9 +57,11 @@ Eligible soil components are defined by the following criteria:
 
 -   [a major component](https://www.nrcs.usda.gov/sites/default/files/2022-09/SSM-ch4.pdf)
 
--   not a [Miscellaneous Area](https://www.nrcs.usda.gov/sites/default/files/2022-09/SSM-ch4.pdf)
+-   [not]{.underline} a [Miscellaneous Area](#0)
 
--   not from an Out-of-Date Soil Survey Area
+-   [not]{.underline} from an Out-of-Date Soil Survey Area
+
+-   [not]{.underline} a [Taxa Above Family](#0)
 
 #### Problems with 'Record When Last Updated'
 
